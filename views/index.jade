@@ -1,0 +1,97 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src='https://use.fontawesome.com/56d706a808.js')
+    body
+        div#primary-container
+            div#left-column
+                img#avatar(src=image)
+                h1#name=`${contact.name.first} ${contact.name.last}`
+                if contact.birth
+                    div.birth-item
+                        i.fa.fa-asterisk
+                        div=contact.birth
+
+                div.contact-items
+                    if contact.address
+                        div
+                            i.fa.fa-home
+                            div
+                                for line in contact.address
+                                    p=line
+                    if contact.phone
+                        div
+                            i.fa.fa-mobile
+                            div=contact.phone
+                    if contact.mail
+                        div
+                            i.fa.fa-envelope
+                            div=contact.mail
+                    if contact.web
+                        div
+                            i.fa.fa-globe
+                            div=contact.web
+
+                if languages
+                    div.captioned-left-column-item
+                        h3
+                            i.fa.fa-language
+                            if languagesCaption
+                                span=languagesCaption
+                        div
+                            for language in languages
+                                p=`${language.name} • ${language.level}`
+            div#right-column
+                div.right-column-section
+                    if educationCaption
+                        h2=educationCaption
+                    div
+                        for educationItem in education
+                            h3.title-with-period
+                                span=educationItem.title
+                                span.period
+                                    span=educationItem.period.begin
+                                    if educationItem.period.end
+                                        span=` - ${educationItem.period.end}`
+                            if educationItem.description
+                                p=educationItem.description
+                            if educationItem.activities
+                                for activity in educationItem.activities
+                                    p.bullet=`• ${activity}`
+                div.right-column-section
+                    if experienceCaption
+                        h2=experienceCaption
+                    div
+                        for experienceItem in experience
+                            h3.title-with-period
+                                span=experienceItem.title
+                                if experienceItem.period
+                                    span.period
+                                        span=experienceItem.period.begin
+                                        if experienceItem.period.end
+                                            span=` - ${experienceItem.period.end}`
+                            if experienceItem.description
+                                p=experienceItem.description
+                            if experienceItem.activities
+                                for activity in experienceItem.activities
+                                    p.bullet=`• ${activity}`
+
+                div.right-column-section
+                    if certificatesCaption
+                        h2=certificatesCaption
+                    div
+                        for certificatesItem in certificates
+                            h3.title-with-period
+                                span=certificatesItem.title
+                                if certificatesItem.period
+                                    span.period
+                                        span=certificatesItem.period.begin
+                                        if certificatesItem.period.end
+                                            span=` - ${certificatesItem.period.end}`
+                            if certificatesItem.description
+                                p=certificatesItem.description
+                            if certificatesItem.activities
+                                for activity in certificatesItem.activities
+                                    p.bullet=`• ${activity}`

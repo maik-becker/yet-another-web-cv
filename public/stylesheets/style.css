@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/*!
+ *  Copyright © 2018 Maik Becker <hi@maik.codes>
+ *  
+ *  This work is free. You can redistribute it and/or modify it under the terms of the 
+ *  Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar.
+ *  See http://www.wtfpl.net/ for more details.
+ */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+body {
+  margin: auto;
+  width: 21cm;
+  height: 29.7cm;
+  font: 15px "Roboto", sans-serif;
+  font-weight: 300; }
+
+.fa {
+  font-size: 1.1rem; }
+
+h1 {
+  font-size: 0.96cm;
+  font-weight: 300;
+  margin: 0; }
+
+h2 {
+  margin: 0; }
+
+h3 {
+  margin: 0; }
+
+a {
+  color: #00B7FF; }
+
+p {
+  margin: 0; }
+
+#primary-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%; }
+  #primary-container > * {
+    display: block; }
+
+#left-column {
+  height: 100%;
+  background-color: #222222;
+  width: 7.434cm;
+  display: flex;
+  flex-direction: column;
+  color: #cbcbcb; }
+  #left-column h1, #left-column h2, #left-column h3, #left-column h4 {
+    color: #d1d1d1; }
+  #left-column h3 {
+    font-weight: 400;
+    font-size: 1.05em; }
+  #left-column > * {
+    margin: .45cm auto; }
+  #left-column > #avatar {
+    width: 5.5755cm;
+    height: 5.5755cm;
+    border-radius: 50%;
+    margin-top: 1.2cm;
+    margin-bottom: 15px; }
+  #left-column > #name {
+    margin-bottom: 2px;
+    margin-top: 2px; }
+  #left-column > .birth-item, #left-column > .contact-items > *, #left-column .captioned-left-column-item {
+    font-size: 15px;
+    padding-left: 12px;
+    padding-right: 12px; }
+    #left-column > .birth-item > .fa, #left-column > .contact-items > * > .fa, #left-column .captioned-left-column-item > .fa {
+      color: #a3a3a3; }
+    #left-column > .birth-item div > p, #left-column > .contact-items > * div > p, #left-column .captioned-left-column-item div > p {
+      display: block;
+      text-align: center; }
+    #left-column > .birth-item div > p:not(:first-child), #left-column > .contact-items > * div > p:not(:first-child), #left-column .captioned-left-column-item div > p:not(:first-child) {
+      margin-top: 0.05cm; }
+    #left-column > .birth-item div > p:not(:last-child), #left-column > .contact-items > * div > p:not(:last-child), #left-column .captioned-left-column-item div > p:not(:last-child) {
+      margin-bottom: 0.05cm; }
+  #left-column > .birth-item, #left-column > .contact-items > * {
+    display: flex;
+    align-items: center; }
+    #left-column > .birth-item > .fa, #left-column > .contact-items > * > .fa {
+      margin-right: .2cm; }
+  #left-column > .contact-items {
+    display: flex;
+    flex-direction: column;
+    align-content: center; }
+    #left-column > .contact-items > * {
+      margin: .2cm auto; }
+  #left-column .captioned-left-column-item > h3 {
+    text-align: center; }
+    #left-column .captioned-left-column-item > h3 > .fa {
+      margin-right: 0.14cm; }
+    #left-column .captioned-left-column-item > h3 > span {
+      margin-left: 0.14cm; }
+
+#right-column {
+  width: 13.566cm;
+  background-color: #ffffff;
+  color: #222222;
+  padding: 1.05cm 0.91cm; }
+  #right-column h2 {
+    font-size: 30px;
+    font-weight: 500; }
+  #right-column .right-column-section:not(:first-child) > h2 {
+    margin-top: 21px; }
+  #right-column h3 {
+    font-size: 21px;
+    font-weight: 300;
+    margin-top: 13px; }
+  #right-column p {
+    margin-top: 0.37em;
+    padding-left: 1.5px; }
+  #right-column .right-column-section .title-with-period {
+    display: flex; }
+    #right-column .right-column-section .title-with-period > *:first-child {
+      flex-grow: 1; }
+    #right-column .right-column-section .title-with-period .period {
+      font-weight: 100; }
+
+/*# sourceMappingURL=style.css.map */

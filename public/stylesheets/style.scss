@@ -1,0 +1,242 @@
+/*!
+ *  Copyright © 2018 Maik Becker <hi@maik.codes>
+ *  
+ *  This work is free. You can redistribute it and/or modify it under the terms of the 
+ *  Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar.
+ *  See http://www.wtfpl.net/ for more details.
+ */
+
+// Sizing
+$width: 21cm;
+$height: 29.7cm;
+$left-column-width-ratio: .354;
+$left-column-item-padding: 12px;
+$right-column-vertical-padding: 1.05cm;
+$right-column-horizontal-padding: .91cm;
+$right-column-section-caption-margin-top: 21px;
+$right-column-item-caption-margin-top: 13px;
+$right-column-p-margin-top: .37em;
+
+// Font
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+$font-family: 'Roboto', sans-serif;
+
+// Background colors
+$background-left: #222222;
+$background-right: #ffffff;
+
+// Text colors
+$left-column-font-color-heading: #d1d1d1;
+$left-column-font-color-text: #cbcbcb;
+$left-column-icon-font-color: #a3a3a3;
+$right-column_font-color-heading: #222222;
+$right-column-font-color-text: #222222;
+
+// Font weights
+$default-font-weight: 300;
+$h1-font-weight: $default-font-weight;
+$left-column-h3-font-weight: 400;
+$right-column-h2-font-weight: 500;
+$right-column-h3-font-weight: $default-font-weight;
+$right-column-period-font-weight: 100;
+
+// Font sizes
+$default-font-size: 15px;
+$h1-font-size: .96cm;
+$left-column-h3-font-size: 1.05em;
+$right-column-h2-font-size: 30px;
+$right-column-h3-font-size: 21px;
+
+body {
+  
+  margin: auto;
+  width: $width;
+  height: $height;
+  font: $default-font-size $font-family;
+  font-weight: $default-font-weight;
+}
+
+.fa {
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  font-weight: $h1-font-weight;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+p {
+  margin: 0;
+}
+
+#primary-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  > * {
+    display: block;
+  }
+}
+
+#left-column {
+  height: 100%;
+  background-color: $background-left;
+  width: $width * $left-column-width-ratio;
+
+  display: flex;
+  flex-direction: column;
+  color: $left-column-font-color-text;
+
+  h1, h2, h3, h4 {
+    color: $left-column-font-color-heading;
+  }
+
+  h3 {
+    font-weight: $left-column-h3-font-weight;
+    font-size: $left-column-h3-font-size;
+  }
+
+  > * {
+    margin: .45cm auto;
+  }
+
+  > #avatar {
+    $width-ratio: .75;
+
+    width: $width * $left-column-width-ratio * $width-ratio;
+    height: $width * $left-column-width-ratio * $width-ratio;
+
+    border-radius: 50%;
+    margin-top: 1.2cm;
+    margin-bottom: $default-font-size;
+  }
+
+  > #name {
+    margin-bottom: 2px;
+    margin-top: 2px;
+  }
+
+  %left-column-item {
+    font-size: $default-font-size;
+    padding-left: $left-column-item-padding;
+    padding-right: $left-column-item-padding;
+
+    > .fa {
+      color: $left-column-icon-font-color;
+    }
+
+    div > p {
+      display: block;
+      text-align: center;
+    }
+
+    $paragraphs-margin: .1cm;
+
+    div > p:not(:first-child) {
+      margin-top: $paragraphs-margin * .5;
+    }
+
+    div > p:not(:last-child) {
+      margin-bottom: $paragraphs-margin * .5;
+    }
+
+  }
+
+  %icon-only-left-column-item {
+    @extend %left-column-item;
+    display: flex;
+    align-items: center;
+
+    > .fa {
+      margin-right: .2cm;
+    }
+  }
+
+  > .birth-item {
+    @extend %icon-only-left-column-item;
+  }
+
+  > .contact-items {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    > * {
+      @extend %icon-only-left-column-item;
+      margin: .2cm auto;
+    }
+  }
+
+  .captioned-left-column-item {
+    @extend %left-column-item;
+
+    > h3 {
+
+      $font-icon-text-spacing: .28cm;
+
+      text-align: center;
+      > .fa {
+        margin-right: $font-icon-text-spacing * .5;
+      }
+
+      > span {
+        margin-left: $font-icon-text-spacing * .5;
+      }
+    }
+  }
+
+}
+
+#right-column {
+  width: $width * (1-$left-column-width-ratio);
+  background-color: $background-right;
+  color: $right-column-font-color-text;
+  padding: $right-column-vertical-padding $right-column-horizontal-padding;
+
+  h2 {
+    font-size: $right-column-h2-font-size;
+    font-weight: $right-column-h2-font-weight;
+  }
+  
+  .right-column-section:not(:first-child) > h2 {
+    margin-top: $right-column-section-caption-margin-top;
+  }
+
+  h3 {
+    font-size: $right-column-h3-font-size;
+    font-weight: $right-column-h3-font-weight;
+    margin-top: $right-column-item-caption-margin-top;
+  }
+
+  p {
+    margin-top: $right-column-p-margin-top;
+    padding-left: 1.5px;
+  }
+
+  .right-column-section {
+    .title-with-period {
+      display: flex;
+      > *:first-child {
+        flex-grow: 1;
+      }
+      
+      .period {
+        font-weight: $right-column-period-font-weight;
+      } 
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "image": "/images/photo.jpg",
+  "title": "Curriculum Vitae | Vewy Cute Kitty",
+  "contact": {
+    "name": {
+      "first": "Wewy C.",
+      "last": "Kitty"
+    },
+    "birth": "13.12.2012",
+    "address": [
+      "Toebeans' St. 55",
+      "12345 Meowcity"
+    ],
+    "phone": "+123 456 789101112",
+    "mail": "meow@wewyckitty.me",
+    "web": "wewyckitty.me"
+  },
+  "languagesCaption": "Languages",
+  "languages": [
+    {
+      "name": "Meow",
+      "level": "Native proficiency"
+    },
+    {
+      "name": "English",
+      "level": "Full professional proficiency"
+    },
+    {
+      "name": "Chinese",
+      "level": "Advanced proficiency"
+    }
+  ],
+  "educationCaption": "Education",
+  "education": [
+    {
+      "title": "Meowcity Kittmentary school",
+      "period": {
+        "begin": "2012",
+        "end": "2014"
+      },
+      "description": "Graduated with very good grades ^-^"
+    },
+    {
+      "title": "Tailtown High School",
+      "period": {
+        "begin": "2014",
+        "end": "2016"
+      },
+      "description": "Graduated with okay grades ^.^"
+    },
+    {
+      "title": "The Kitty University",
+      "period": {
+        "begin": "2016",
+        "end": "2018"
+      },
+      "description": "Studied Professional Purring (B.Cute.) with best grades ^o^"
+    }
+  ],
+  "experienceCaption": "Experience",
+  "experience": [
+    {
+      "title": "Purrfect Ltd.",
+      "period": {
+        "begin": "2015"
+      },
+      "description": "Internship for junior cuteness engineer (six months)",
+      "activities": [
+        "coffee-cooking for my kitty colleagues",
+        "writing documentations my kitty colleagues didn't want to do using KittyWiki",
+        "being petted by humans (very often)",
+        "writing lots of tiny mails using KittyMail"
+      ]
+    },
+    {
+      "title": "Best Boxes",
+      "period": {
+        "begin": "2016",
+        "end": "2017"
+      },
+      "description": "Side-job as junior cardboard box tester",
+      "activities": [
+        "testing of boxes in regards of compatibility with cute appearance",
+        "documentation of my findings in KittyWiki Enterprise Edition",
+        "collaboration using KittyProject"
+      ]
+    },
+    {
+      "title": "Freelancing",
+      "period": {
+        "begin": "2017",
+        "end": "2018"
+      },
+      "description": "Several jobs in the field of purr management"
+    },
+    {
+      "title": "MyKittyBox",
+      "period": {
+        "begin": "Since 2018"
+      },
+      "description": "Junior purr manager",
+      "activities": [
+        "being petted by humans",
+        "writing important mails using KittyMail",
+        "advising cuteness engineers",
+        "management using KittyProject"
+      ]
+    }
+  ],
+  "certificatesCaption": "Certificates",
+  "certificates": [
+    {
+      "title": "Proof of ability to work with computers",
+      "period": {
+        "begin": "2013"
+      }
+    },
+    {
+      "title": "Junior Purr Engineer",
+      "period": {
+        "begin": "2014"
+      }
+    },
+    {
+      "title": "Professional Purr Manager",
+      "period": {
+        "begin": "2016"
+      }
+    }
+  ]
+}
