@@ -1,7 +1,7 @@
 /*!
- *  Copyright © 2018 Maik Becker <hi@maik.codes>
- *  
- *  This work is free. You can redistribute it and/or modify it under the terms of the 
+ *  Copyright © 2019 Yuri Becker <hi@yuri.li>
+ *
+ *  This work is free. You can redistribute it and/or modify it under the terms of the
  *  Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar.
  *  See http://www.wtfpl.net/ for more details.
  */
@@ -48,7 +48,7 @@ $right-column-h2-font-size: 30px;
 $right-column-h3-font-size: 21px;
 
 body {
-  
+
   margin: auto;
   width: $width;
   height: $height;
@@ -211,7 +211,7 @@ p {
     font-size: $right-column-h2-font-size;
     font-weight: $right-column-h2-font-weight;
   }
-  
+
   .right-column-section:not(:first-child) > h2 {
     margin-top: $right-column-section-caption-margin-top;
   }
@@ -225,6 +225,7 @@ p {
   p {
     margin-top: $right-column-p-margin-top;
     padding-left: 1.5px;
+    line-height: 1.5em;
   }
 
   .right-column-section {
@@ -233,10 +234,10 @@ p {
       > *:first-child {
         flex-grow: 1;
       }
-      
+
       .period {
         font-weight: $right-column-period-font-weight;
-      } 
+      }
     }
   }
 }

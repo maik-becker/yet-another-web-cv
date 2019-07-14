@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*!
- *  Copyright © 2018 Maik Becker <hi@maik.codes>
- *  
- *  This work is free. You can redistribute it and/or modify it under the terms of the 
+ *  Copyright © 2019 Yuri Becker <hi@yuri.li>
+ *
+ *  This work is free. You can redistribute it and/or modify it under the terms of the
  *  Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar.
  *  See http://www.wtfpl.net/ for more details.
  */
@@ -111,7 +111,8 @@ p {
     margin-top: 13px; }
   #right-column p {
     margin-top: 0.37em;
-    padding-left: 1.5px; }
+    padding-left: 1.5px;
+    line-height: 1.5em; }
   #right-column .right-column-section .title-with-period {
     display: flex; }
     #right-column .right-column-section .title-with-period > *:first-child {
