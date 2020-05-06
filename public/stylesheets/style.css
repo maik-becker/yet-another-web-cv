@@ -6,12 +6,12 @@
  *  Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar.
  *  See http://www.wtfpl.net/ for more details.
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 body {
   margin: auto;
   width: 21cm;
   height: 29.7cm;
-  font: 15px "Roboto", sans-serif;
+  font: 15px "Nunito", sans-serif;
   font-weight: 300; }
 
 .fa {
@@ -34,20 +34,28 @@ a {
 p {
   margin: 0; }
 
-#primary-container {
+b {
+  font-weight: 600; }
+
+main {
   display: flex;
   flex-direction: row;
-  height: 100%; }
-  #primary-container > * {
+  height: 100%;
+  overflow: hidden; }
+  main > * {
     display: block; }
 
 #left-column {
   height: 100%;
-  background-color: #222222;
+  background-color: #6c567b;
   width: 7.434cm;
   display: flex;
   flex-direction: column;
-  color: #cbcbcb; }
+  color: #cbcbcb;
+  justify-content: stretch;
+  padding: 0 0.91cm;
+  box-sizing: border-box;
+  text-align: center; }
   #left-column h1, #left-column h2, #left-column h3, #left-column h4 {
     color: #d1d1d1; }
   #left-column h3 {
@@ -59,36 +67,35 @@ p {
     width: 5.5755cm;
     height: 5.5755cm;
     border-radius: 50%;
-    margin-top: 1.2cm;
+    margin-top: .6cm;
     margin-bottom: 15px; }
   #left-column > #name {
     margin-bottom: 2px;
     margin-top: 2px; }
   #left-column > .birth-item, #left-column > .contact-items > *, #left-column .captioned-left-column-item {
-    font-size: 15px;
-    padding-left: 12px;
-    padding-right: 12px; }
+    font-size: 15px; }
     #left-column > .birth-item > .fa, #left-column > .contact-items > * > .fa, #left-column .captioned-left-column-item > .fa {
       color: #a3a3a3; }
     #left-column > .birth-item div > p, #left-column > .contact-items > * div > p, #left-column .captioned-left-column-item div > p {
       display: block;
       text-align: center; }
     #left-column > .birth-item div > p:not(:first-child), #left-column > .contact-items > * div > p:not(:first-child), #left-column .captioned-left-column-item div > p:not(:first-child) {
-      margin-top: 0.05cm; }
+      margin-top: 0.2cm; }
     #left-column > .birth-item div > p:not(:last-child), #left-column > .contact-items > * div > p:not(:last-child), #left-column .captioned-left-column-item div > p:not(:last-child) {
-      margin-bottom: 0.05cm; }
+      margin-bottom: 0.2cm; }
   #left-column > .birth-item, #left-column > .contact-items > * {
     display: flex;
     align-items: center; }
     #left-column > .birth-item > .fa, #left-column > .contact-items > * > .fa {
-      margin-right: .2cm; }
+      margin-right: 0.2cm; }
   #left-column > .contact-items {
     display: flex;
     flex-direction: column;
     align-content: center; }
     #left-column > .contact-items > * {
-      margin: .2cm auto; }
+      margin: 0.2cm auto; }
   #left-column .captioned-left-column-item > h3 {
+    margin-bottom: 0.2cm;
     text-align: center; }
     #left-column .captioned-left-column-item > h3 > .fa {
       margin-right: 0.14cm; }
@@ -107,8 +114,10 @@ p {
     margin-top: 21px; }
   #right-column h3 {
     font-size: 21px;
-    font-weight: 300;
-    margin-top: 13px; }
+    font-weight: 400;
+    margin-top: 1em; }
+  #right-column h3:first-child {
+    margin-top: 0.7em; }
   #right-column p {
     margin-top: 0.37em;
     padding-left: 1.5px;
@@ -116,7 +125,7 @@ p {
   #right-column .right-column-section .title-with-period {
     display: flex; }
     #right-column .right-column-section .title-with-period > *:first-child {
-      flex-grow: 1; }
+      margin-right: .4em; }
     #right-column .right-column-section .title-with-period .period {
       font-weight: 100; }
 

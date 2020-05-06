@@ -5,13 +5,13 @@
     "type": "git"
   },
   "license": "WTFPL",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "start": "node ./app"
   },
   "dependencies": {
-    "express": "~4.17.1",
-    "pug": "~2.0.4",
-    "node-sass-middleware": "~0.11.0"
+    "express": "4.17.1",
+    "pug": "2.0.4",
+    "node-sass-middleware": "0.11.0"
   }
 }

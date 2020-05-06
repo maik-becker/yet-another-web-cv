@@ -9,20 +9,21 @@
 // Sizing
 $width: 21cm;
 $height: 29.7cm;
+$content-horizontal-padding: .91cm;
 $left-column-width-ratio: .354;
-$left-column-item-padding: 12px;
+$left-column-horizontal-padding: $content-horizontal-padding;
 $right-column-vertical-padding: 1.05cm;
-$right-column-horizontal-padding: .91cm;
+$right-column-horizontal-padding: $content-horizontal-padding;
 $right-column-section-caption-margin-top: 21px;
-$right-column-item-caption-margin-top: 13px;
+$right-column-item-caption-margin-top: 1em;
 $right-column-p-margin-top: .37em;
 
 // Font
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
-$font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+$font-family: 'Nunito', sans-serif;
 
 // Background colors
-$background-left: #222222;
+$background-left: #6c567b;
 $background-right: #ffffff;
 
 // Text colors
@@ -37,7 +38,7 @@ $default-font-weight: 300;
 $h1-font-weight: $default-font-weight;
 $left-column-h3-font-weight: 400;
 $right-column-h2-font-weight: 500;
-$right-column-h3-font-weight: $default-font-weight;
+$right-column-h3-font-weight: 400;
 $right-column-period-font-weight: 100;
 
 // Font sizes
@@ -46,9 +47,9 @@ $h1-font-size: .96cm;
 $left-column-h3-font-size: 1.05em;
 $right-column-h2-font-size: 30px;
 $right-column-h3-font-size: 21px;
+$left-column-item-spacing: .2cm;
 
 body {
-
   margin: auto;
   width: $width;
   height: $height;
@@ -82,10 +83,15 @@ p {
   margin: 0;
 }
 
-#primary-container {
+b {
+  font-weight: 600;
+}
+
+main {
   display: flex;
   flex-direction: row;
   height: 100%;
+  overflow: hidden;
 
   > * {
     display: block;
@@ -100,6 +106,11 @@ p {
   display: flex;
   flex-direction: column;
   color: $left-column-font-color-text;
+  justify-content: stretch;
+
+  padding: 0 $left-column-horizontal-padding;
+  box-sizing: border-box;
+  text-align: center;
 
   h1, h2, h3, h4 {
     color: $left-column-font-color-heading;
@@ -121,7 +132,7 @@ p {
     height: $width * $left-column-width-ratio * $width-ratio;
 
     border-radius: 50%;
-    margin-top: 1.2cm;
+    margin-top: .6cm;
     margin-bottom: $default-font-size;
   }
 
@@ -132,8 +143,6 @@ p {
 
   %left-column-item {
     font-size: $default-font-size;
-    padding-left: $left-column-item-padding;
-    padding-right: $left-column-item-padding;
 
     > .fa {
       color: $left-column-icon-font-color;
@@ -144,7 +153,7 @@ p {
       text-align: center;
     }
 
-    $paragraphs-margin: .1cm;
+    $paragraphs-margin: .4cm;
 
     div > p:not(:first-child) {
       margin-top: $paragraphs-margin * .5;
@@ -162,7 +171,7 @@ p {
     align-items: center;
 
     > .fa {
-      margin-right: .2cm;
+      margin-right: $left-column-item-spacing;
     }
   }
 
@@ -177,7 +186,7 @@ p {
 
     > * {
       @extend %icon-only-left-column-item;
-      margin: .2cm auto;
+      margin: $left-column-item-spacing auto;
     }
   }
 
@@ -187,6 +196,7 @@ p {
     > h3 {
 
       $font-icon-text-spacing: .28cm;
+      margin-bottom: $left-column-item-spacing;
 
       text-align: center;
       > .fa {
@@ -198,7 +208,6 @@ p {
       }
     }
   }
-
 }
 
 #right-column {
@@ -222,6 +231,10 @@ p {
     margin-top: $right-column-item-caption-margin-top;
   }
 
+  h3:first-child {
+    margin-top: $right-column-item-caption-margin-top - .3em;
+  }
+
   p {
     margin-top: $right-column-p-margin-top;
     padding-left: 1.5px;
@@ -232,7 +245,7 @@ p {
     .title-with-period {
       display: flex;
       > *:first-child {
-        flex-grow: 1;
+        margin-right: .4em;
       }
 
       .period {

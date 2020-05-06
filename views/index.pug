@@ -5,16 +5,16 @@ html
         link(rel='stylesheet', href='/stylesheets/style.css')
         script(src='https://use.fontawesome.com/56d706a808.js')
     body
-        div#primary-container
+        main
             div#left-column
                 img#avatar(src=image)
                 h1#name=`${contact.name.first} ${contact.name.last}`
-                if contact.birth
-                    div.birth-item
-                        i.fa.fa-asterisk
-                        div=contact.birth
 
                 div.contact-items
+                    if contact.birth
+                        div.birth-item
+                            i.fa.fa-asterisk
+                            div=contact.birth
                     if contact.address
                         div
                             i.fa.fa-home
@@ -42,7 +42,23 @@ html
                                 span=languagesCaption
                         div
                             for language in languages
-                                p=`${language.name} • ${language.level}`
+                                p
+                                    b=language.name
+                                    br
+                                    span=language.level
+                if certificates
+                    div.captioned-left-column-item
+                        h3
+                            i.fa.fa-certificate
+                            if certificatesCaption
+                                span=certificatesCaption
+                        div
+                            for certificate in certificates
+                                p
+                                    b=certificate.title
+                                    if(certificate.period)
+                                        br
+                                        span=`${certificate.period.begin}${!certificate.period.end ? '' : `- ${certificate.period.end}`}`
             div#right-column
                 div.right-column-section
                     if educationCaption
@@ -50,11 +66,11 @@ html
                     div
                         for educationItem in education
                             h3.title-with-period
-                                span=educationItem.title
                                 span.period
                                     span=educationItem.period.begin
                                     if educationItem.period.end
                                         span=` - ${educationItem.period.end}`
+                                span=educationItem.title
                             if educationItem.description
                                 p=educationItem.description
                             if educationItem.activities
@@ -66,32 +82,14 @@ html
                     div
                         for experienceItem in experience
                             h3.title-with-period
-                                span=experienceItem.title
                                 if experienceItem.period
                                     span.period
                                         span=experienceItem.period.begin
                                         if experienceItem.period.end
                                             span=` - ${experienceItem.period.end}`
+                                span=experienceItem.title
                             if experienceItem.description
                                 p=experienceItem.description
                             if experienceItem.activities
                                 for activity in experienceItem.activities
-                                    p.bullet=`• ${activity}`
-
-                div.right-column-section
-                    if certificatesCaption
-                        h2=certificatesCaption
-                    div
-                        for certificatesItem in certificates
-                            h3.title-with-period
-                                span=certificatesItem.title
-                                if certificatesItem.period
-                                    span.period
-                                        span=certificatesItem.period.begin
-                                        if certificatesItem.period.end
-                                            span=` - ${certificatesItem.period.end}`
-                            if certificatesItem.description
-                                p=certificatesItem.description
-                            if certificatesItem.activities
-                                for activity in certificatesItem.activities
                                     p.bullet=`• ${activity}`
